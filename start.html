@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HRM1101-03</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px; /* Space above the table */
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+        #input-value, button {
+            margin-bottom: 10px; /* Space below the input and button */
+        }
+        .warning-text {
+            font-size: 20px; /* Font size of the text */
+            margin-top: 20px;
+        }
+        .warning-text .not {
+            color: red; /* Color for the word 'NOT' */
+            font-weight: bold; /* Bold font weight */
+        }
+    </style>
+</head>
+<body>
+    <h1>HRM1101-03</h1>
+    <input type="text" id="input-value" placeholder="ex. tuo11111">
+    <button onclick="findMatch()">Your Total Score</button>
+    <div id="match-result"></div>
+
+    <table>
+        <tr>
+            <th>A</th>
+            <td>940-1,100</td>
+            <th>B+</th>
+            <td>870-899</td>
+            <th>C+</th>
+            <td>770-799</td>
+            <th>D</th>
+            <td>600-699</td>
+        </tr>
+        <tr>
+            <th>A-</th>
+            <td>900-939</td>
+            <th>B</th>
+            <td>840-869</td>
+            <th>C</th>
+            <td>740-769</td>
+            <th>F</th>
+            <td>599 or fewer</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+            <th>B-</th>
+            <td>800-839</td>
+            <th>C-</th>
+            <td>700-739</td>
+            <th></th>
+            <td></td>
+        </tr>
+    </table>
+   <!-- Warning text -->
+   <div class="warning-text">
+    This is <span class="not">NOT</span> your final grade.
+</div>
+
+</body>
+</html>
